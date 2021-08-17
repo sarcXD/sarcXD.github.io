@@ -1,0 +1,66 @@
+body {
+    background: rgb(19,19,22);
+    background: radial-gradient(circle, rgba(19,19,22,1) 0%, rgba(17,17,17,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: emberly;
+    src: url(./assets/fonts/emberly/OTF/Emberly-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: emberly-text;
+    src: url(./assets/fonts/emberly/OTF/Emberly-Bold.otf);
+}
+
+.intro-ctn {
+    /* background: #fbf7f5; */
+    width: 500px;
+    /*height: 200px; */
+    margin: 100px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.intro-txt {
+    font-family: emberly;
+    font-size: 35px;
+    color: tan;
+    letter-spacing: 1px;
+    animation: myAnim 1s ease-out 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.intro-txt-large {
+    font-size: 50px;
+    color: tan;
+    letter-spacing: 1px;
+    font-family: emberly;
+}
+
+.projects-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+    color: tan;
+    font-family: emberly-text;
+    font-size: 20px;
+}
+
+
