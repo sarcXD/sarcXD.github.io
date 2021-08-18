@@ -4,19 +4,39 @@
 <HEAD>
     <TITLE>Talha Aamir Portfolio</TITLE>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </HEAD>
 
 <BODY>
     <div class="intro-ctn">
-        <div class="intro-txt-large"><b>Hi,</b></div>
-        <div class="intro-txt">
-            I am Talha Aamir, a software engineer by profession, a builder and problem solver at heart.
+        <div class="col-ctn">
+            <div class="intro-txt-large"><b>Hi,</b></div>
+            <div class="intro-txt">
+                I am Talha Aamir, a <a class="txt-hlt">software engineer</a> by profession, 
+                a <a class="txt-hlt">builder</a> and <a class="txt-hlt">problem solver</a> at heart.
+            </div>
         </div>
     </div>
-    <div class="projects-ctn">
+    <a href="#projects"><img src="assets/icons/expand_more.svg" class="icon-cls"></a>
+    <div id="projects" class="projects-ctn">
         <div class="projects-hdr">My Projects</div>
         <ul class="projects-list">
-
+            <li class="proj">
+                <div class="proj-logo">RS</div>
+                <ul class="proj-ctn">
+                    <li class="proj-title">readSync</li>
+                    <li class="proj-desc">Read Pdfs anywhere, picking up right where you left off</li>
+                </ul>
+                
+            </li>
+            <li class="proj">
+                <div class="proj-logo">SS</div>
+                <ul class="proj-ctn">
+                    <li class="proj-title">shareStuff</li>
+                    <li class="proj-desc">Share anything with your friends</li>
+                </ul>
+            </li>
         </ul>
     </div>
 </BODY>

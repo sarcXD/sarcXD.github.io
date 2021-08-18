@@ -1,66 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background: rgb(19,19,22);
-    background: radial-gradient(circle, rgba(19,19,22,1) 0%, rgba(17,17,17,1) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: rgb(19, 19, 22);
+  background: radial-gradient(
+    circle,
+    rgba(19, 19, 22, 1) 0%,
+    rgba(17, 17, 17, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @font-face {
-    font-family: emberly;
-    src: url(./assets/fonts/emberly/OTF/Emberly-ExtraBold.otf);
+  font-family: emberly;
+  src: url(./assets/fonts/emberly/OTF/Emberly-ExtraBold.otf);
 }
 
 @font-face {
-    font-family: emberly-text;
-    src: url(./assets/fonts/emberly/OTF/Emberly-Bold.otf);
+  font-family: emberly-text;
+  src: url(./assets/fonts/emberly/OTF/Emberly-Bold.otf);
 }
 
 .intro-ctn {
-    /* background: #fbf7f5; */
-    width: 500px;
-    /*height: 200px; */
-    margin: 100px 0;
-    padding: 20px;
-    border-radius: 10px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+
+.col-ctn {
+  display: flex;
+  flex-direction: column;
 }
 
 .intro-txt {
-    font-family: emberly;
-    font-size: 35px;
-    color: tan;
-    letter-spacing: 1px;
-    animation: myAnim 1s ease-out 0s 1 normal forwards;
+  font-family: emberly;
+  font-size: 35px;
+  color: #d2b48c;
+  letter-spacing: 1px;
+  animation: textJumble 1.5s ease-in 0s 1 normal forwards;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-@keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+.txt-hlt {
+  color: #aaaaaa;
+}
+
+@keyframes textJumble {
+  0% {
+    width: 0;
+    height: 109px;
+  }
+
+  100% {
+    width: 100%;
+    height: 109px;
+    white-space: normal;
+  }
 }
 
 .intro-txt-large {
-    font-size: 50px;
-    color: tan;
-    letter-spacing: 1px;
-    font-family: emberly;
+  font-size: 50px;
+  color: tan;
+  letter-spacing: 1px;
+}
+
+.icon-cls {
+  position: relative;
+  bottom: 70px;
+  height: 50px;
+  filter: invert(86%) sepia(24%) saturate(566%) hue-rotate(337deg)
+    brightness(84%) contrast(94%);
+}
+
+.icon-cls:hover {
+  filter: invert(67%) sepia(28%) saturate(11%) hue-rotate(315deg)
+    brightness(96%) contrast(92%);
 }
 
 .projects-ctn {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 500px;
-    color: tan;
-    font-family: emberly-text;
-    font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 500px;
+  color: tan;
+  font-family: emberly-text;
+  font-size: 20px;
+  height: 100vh;
+  padding: 20px 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
 
+li {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj {
+  position: relative;
+  z-index: 10;
+  background-color: red;
+}
+
+.proj-ctn {
+  display: flex;
+  flex-direction: column;
+  /* display: none; */
+}
+
+/* .proj:hover .proj-logo {
+  display: none;
+}
+
+.proj:hover .proj-ctn {
+  display: flex;
+  animation: textFade 1s ease 0s 1 normal forwards;
+} */
+
+@keyframes textFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
